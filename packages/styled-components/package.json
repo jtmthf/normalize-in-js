@@ -1,6 +1,6 @@
 {
   "name": "@normalize-in-js/styled-components",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "styled-components implementation of normalize-in-js",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.js",
@@ -27,7 +27,7 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
-    "@normalize-in-js/shared": "0.0.0",
+    "@normalize-in-js/shared": "^0.1.0",
     "@storybook/react": "5.3.18",
     "@types/styled-components": "5.1.0",
     "babel-plugin-styled-components": "1.10.7",
