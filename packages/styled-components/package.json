@@ -9,6 +9,10 @@
   "repository": "https://github.com/jtmthf/normalize-in-js/packages/styled-components",
   "author": "Jack Moore <jtmthf@mst.edu>",
   "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist *.tsbuildinfo",
     "build": "yarn clean && concurrently \"npm:build:*\"",
