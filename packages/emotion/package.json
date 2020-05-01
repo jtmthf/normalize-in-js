@@ -1,12 +1,12 @@
 {
-  "name": "@normalize-in-js/styled-components",
+  "name": "@normalize-in-js/emotion",
   "version": "0.0.0",
-  "description": "styled-components implementation of normalize-in-js",
+  "description": "emotion implementation of normalize-in-js",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.js",
   "unpkg": "./dist/umd/index.js",
   "types": "./dist/types/index.d.ts",
-  "repository": "https://github.com/jtmthf/normalize-in-js/packages/styled-components",
+  "repository": "https://github.com/jtmthf/normalize-in-js/packages/emotion",
   "author": "Jack Moore <jtmthf@mst.edu>",
   "license": "MIT",
   "scripts": {
@@ -15,18 +15,16 @@
     "build:src": "rollup -c",
     "build:types": "tsc -p tsconfig.build.json"
   },
-  "peerDependencies": {
-    "styled-components": "^5.0.0"
-  },
-  "devDependencies": {
-    "@normalize-in-js/shared": "0.0.0",
-    "@storybook/react": "5.3.18",
-    "@types/styled-components": "5.1.0",
-    "babel-plugin-styled-components": "1.10.7",
-    "react-is": "16.13.1",
-    "styled-components": "5.1.0"
-  },
   "dependencies": {
     "@babel/runtime": "7.9.2"
+  },
+  "peerDependencies": {
+    "@emotion/core": "^10.0.0"
+  },
+  "devDependencies": {
+    "@emotion/babel-preset-css-prop": "10.0.27",
+    "@emotion/core": "10.0.28",
+    "@normalize-in-js/shared": "0.0.0",
+    "@storybook/react": "5.3.18"
   }
 }

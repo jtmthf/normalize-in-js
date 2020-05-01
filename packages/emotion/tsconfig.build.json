@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "composite": true,
+    "declarationDir": "./dist/types"
+  },
+  "references": [{ "path": "../shared/tsconfig.build.json" }],
+  "exclude": ["src/tests/**", "src/stories/**"]
+}

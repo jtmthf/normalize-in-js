@@ -1,1 +1,7 @@
 node_modules
+dist
+storybook-static
+__diff_output__
+
+*.tsbuildinfo
+yarn-*.log

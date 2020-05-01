@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "composite": true,
+    "declarationDir": "./dist/types"
+  },
+  "exclude": ["src/tests/**"]
+}
