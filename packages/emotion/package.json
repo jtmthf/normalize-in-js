@@ -13,7 +13,8 @@
     "clean": "rimraf dist *.tsbuildinfo",
     "build": "yarn clean && concurrently \"npm:build:*\"",
     "build:src": "rollup -c",
-    "build:types": "tsc -p tsconfig.build.json"
+    "build:types": "tsc -p tsconfig.build.json",
+    "prepublish": "yarn run build"
   },
   "dependencies": {
     "@babel/runtime": "7.9.2"
