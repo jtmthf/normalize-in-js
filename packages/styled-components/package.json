@@ -13,6 +13,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "clean": "rimraf dist *.tsbuildinfo",
     "build": "yarn clean && concurrently \"npm:build:*\"",
