@@ -59,5 +59,6 @@
   },
   "lint-staged": {
     ".*.{js,ts,tsx,json,md}": "prettier --write"
-  }
+  },
+  "version": "0.0.0"
 }
