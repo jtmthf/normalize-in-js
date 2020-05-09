@@ -28,7 +28,8 @@
     "@babel/runtime": "7.9.2"
   },
   "peerDependencies": {
-    "@emotion/core": "^10.0.0"
+    "@emotion/core": "^10.0.0",
+    "react": "^16.8.0"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "10.0.27",
