@@ -1,17 +1,17 @@
-# Normalize in JS - Emotion
+# Normalize in JS - styled-jsx
 
 ## Installation
 
 ### Yarn
 
 ```sh
-yarn add @normalize-in-js/emotion
+yarn add @normalize-in-js/styled-jsx styled-jsx
 ```
 
 ### NPM
 
 ```sh
-npm install @normalize-in-js/emotion
+npm install @normalize-in-js/styled-jsx styled-jsx
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ npm install @normalize-in-js/emotion
 ### Normalize
 
 ```tsx
-import { Normalize } from '@normalize-in-js/emotion';
+import { Normalize } from '@normalize-in-js/styled-jsx';
 
 function App() {
   return <Normalize />;
@@ -29,7 +29,7 @@ function App() {
 ### Reset
 
 ```tsx
-import { Reset } from '@normalize-in-js/emotion';
+import { Reset } from '@normalize-in-js/styled-jsx';
 
 function App() {
   return <Reset />;
@@ -44,7 +44,7 @@ import {
   SanitizeTypography,
   SanitizeForms,
   SanitizePage,
-} from '@normalize-in-js/emotion';
+} from '@normalize-in-js/styled-jsx';
 
 function App() {
   return (
@@ -61,7 +61,7 @@ function App() {
 ### Preflight
 
 ```tsx
-import { Preflight } from '@normalize-in-js/emotion';
+import { Preflight } from '@normalize-in-js/styled-jsx';
 
 function App() {
   return <Preflight />;
@@ -71,17 +71,16 @@ function App() {
 #### With Config
 
 ```tsx
-import { createPreflightStyle } from '@normalize-in-js/emotion';
-import { Global } from '@emotion/core';
-
-const customPreflight = createPreflightStyle({
-  fontFamilySans: `"Comic Sans MS", cursive, sans-serif`,
-  fontFamilyMono: `"Lucida Console", Monaco, monospace`,
-  borderColor: 'rebeccapurple',
-});
+import { Preflight } from '@normalize-in-js/styled-jsx';
 
 function App() {
-  return <Global styles={customPreflight} />;
+  return (
+    <Preflight
+      fontFamilySans={`"Comic Sans MS", cursive, sans-serif`}
+      fontFamilyMono={`"Lucida Console", Monaco, monospace`}
+      borderColor="rebeccapurple"
+    />
+  );
 }
 ```
 

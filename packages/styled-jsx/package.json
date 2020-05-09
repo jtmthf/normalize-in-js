@@ -1,0 +1,41 @@
+{
+  "name": "@normalize-in-js/styled-jsx",
+  "version": "0.0.0",
+  "description": "styled-jsx implementation of normalize-in-js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "unpkg": "./dist/umd/index.js",
+  "types": "./dist/types/index.d.ts",
+  "repository": "https://github.com/jtmthf/normalize-in-js/packages/styled-jsx",
+  "author": "Jack Moore <jtmthf@mst.edu>",
+  "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf dist *.tsbuildinfo",
+    "build": "yarn clean && concurrently \"npm:build:*\"",
+    "build:src": "rollup -c",
+    "build:types": "tsc -p tsconfig.build.json",
+    "test": "jest",
+    "prepublish": "yarn run build"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "styled-jsx": "^3.2.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.2"
+  },
+  "devDependencies": {
+    "@normalize-in-js/shared": "^0.1.1",
+    "@storybook/react": "5.3.18",
+    "@types/styled-jsx": "2.2.8",
+    "react": "16.13.1",
+    "styled-jsx": "^3.2.5"
+  }
+}

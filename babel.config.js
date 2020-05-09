@@ -1,3 +1,5 @@
+Error.stackTraceLimit = Infinity;
+
 module.exports = (api) => {
   const isTest = api.env('test');
 
@@ -6,13 +8,10 @@ module.exports = (api) => {
     presets: [
       [
         '@babel/preset-env',
-        isTest
-          ? {
-              targets: {
-                node: 'current',
-              },
-            }
-          : { modules: false },
+        {
+          targets: isTest ? { node: 'current' } : { esmodules: true },
+          modules: isTest ? 'auto' : false,
+        },
       ],
       '@babel/preset-react',
       '@babel/preset-typescript',

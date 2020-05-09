@@ -5,13 +5,15 @@ import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
 import camelCase from 'lodash.camelcase';
 
+process.env.NODE_ENV = 'production';
+
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 const template = (pkg, umd) => ({
   input: 'src/index.ts',
   external: [
     ...(umd ? [] : Object.keys(pkg.dependencies || {})),
-    ...Object.keys(pkg.peerDependencies || {}),
+    ...[...Object.keys(pkg.peerDependencies || {}), 'styled-jsx/style'],
   ],
   output: (umd ? ['umd'] : ['cjs', 'es']).map((format) => ({
     name: camelCase(pkg.name),
@@ -22,6 +24,7 @@ const template = (pkg, umd) => ({
     globals: {
       '@emotion/core': 'emotionCore',
       'styled-components': 'styledComponents',
+      'styled-jsx/style': 'styledJsx',
       react: 'React',
     },
   })),
