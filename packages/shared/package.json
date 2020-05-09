@@ -18,10 +18,6 @@
     "react": "^16.13.0"
   },
   "dependencies": {
-    "@babel/runtime": "7.9.2",
-    "lodash-es": "4.17.15"
-  },
-  "devDependencies": {
-    "@types/lodash-es": "4.17.3"
+    "@babel/runtime": "7.9.2"
   }
 }

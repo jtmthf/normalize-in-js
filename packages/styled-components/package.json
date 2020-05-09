@@ -21,6 +21,7 @@
     "build": "yarn clean && concurrently \"npm:build:*\"",
     "build:src": "rollup -c",
     "build:types": "tsc -p tsconfig.build.json",
+    "test": "jest",
     "prepublish": "yarn run build"
   },
   "peerDependencies": {

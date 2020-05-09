@@ -1,7 +1,5 @@
 module.exports = {
-  moduleNameMapper: {
-    '^lodash-es$': 'lodash',
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { rootMode: 'upward' }],
   },
-  preset: 'jest-puppeteer',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
