@@ -7,3 +7,5 @@ Various CSS resets for various CSS-in-JS frameworks.
 ## [Emotion](packages/emotion/README.md)
 
 ## [Styled Components](packages/styled-components/README.md)
+
+## [Styled JSX](packages/styled-jsx/README.md)
