@@ -4,8 +4,12 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
+    "version": {
+      "message": "chore(release): publish %s"
+    },
     "publish": {
       "conventionalCommits": true
     }
-  }
+  },
+  "ignoreChanges": ["**/tests/**", "**/stories/**", "**/*.md"]
 }
